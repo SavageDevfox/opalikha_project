@@ -1,0 +1,12 @@
+<div class="col d-flex justify-content-center">
+  <div class="card" style="width: 40rem;">
+    <div class="card-body">
+      {% if good.image %}
+          <img class="border-3 rounded img-fluid img-thumbnail mb-2 mx-auto d-block" src="{{ good.image.url }}">
+      {% endif %}
+      <h5 class="card-title">{{ good.title }}</h5>
+      <p class="card-text">{{ good.price }} р.</p>
+      <p class="card-text">{{ good.description }}</p>
+    </div>
+  </div>
+</div>

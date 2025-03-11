@@ -1,0 +1,28 @@
+<header>
+  <nav class="navbar navbar-light" style="background-color: lightskyblue">
+    <div class="container">
+      <a class="navbar-brand" href="{% url 'goods:index' %}">
+        <h2>Корма-Опалиха</h2>
+      </a>
+      {% with request.resolver_match.view_name as view_name %}
+        <ul class="nav nav-pills">
+          <li class="nav-item">
+            <a class="nav-link {% if view_name == 'pages:about' %} text-white {% endif %}" href="{% url 'pages:about' %}">
+              О нас
+            </a>
+          </li>
+          <li>
+            <a class="nav-link {% if view_name == 'pages:contacts' %} text-white {% endif %}" href="{% url 'pages:contacts' %}">
+              Контакты
+            </a>
+          </li>
+          <li>
+            <a class="nav-link {% if view_name == 'pages:delivery' %} text-white {% endif %}" href="{% url 'pages:delivery' %}">
+              Доставка
+            </a>
+          </li>
+        </ul>
+      {% endwith %}
+    </div>
+  </nav>
+</header>

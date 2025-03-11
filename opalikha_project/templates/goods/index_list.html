@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% block title %}
+  Главная страница
+{% endblock %}
+{% block content %}
+  {% for category in object_list %}
+    <article class="mb-5">
+      {% include "includes/category_card.html" %}
+    </article>
+  {% endfor %}
+{% endblock %}
